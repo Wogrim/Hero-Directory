@@ -27,6 +27,8 @@ public class UploadedImage {
     
     private String filename;
     
+    private String foldername;
+    
 	//a hero can upload many images but each image has one uploader
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="uploader_id")
@@ -90,5 +92,13 @@ public class UploadedImage {
 
 	public void setUploader(HeroUser uploader) {
 		this.uploader = uploader;
+	}
+
+	public String getFoldername() {
+		return foldername;
+	}
+
+	public void setFoldername(String foldername) {
+		this.foldername = foldername;
 	}
 }

@@ -51,7 +51,7 @@ public class HeroUser {
     @NotEmpty(message="Confirm Password is required!")
     private String confirm;
     
-    @Size(min=0, max=100, message="philosophy can be up to 100 characters")
+    @Size(min=10, max=100, message="philosophy must be 10 to 100 characters")
     private String philosophy;
     
     @Size(min=0, max=200, message="non-public status message can be up to 200 characters")

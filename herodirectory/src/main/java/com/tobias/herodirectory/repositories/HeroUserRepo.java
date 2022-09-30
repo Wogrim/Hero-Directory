@@ -14,4 +14,10 @@ public interface HeroUserRepo extends CrudRepository<HeroUser, Long> {
 	List<HeroUser> findAll();
 	
 	Optional<HeroUser> findByHeroLicenseNumber(String license);
+	
+	Optional<HeroUser> findByHeroName(String name);
+	
+	List<HeroUser> findFirst20ByOrderByCreatedAtDesc();
+	
+	List<HeroUser> findFirst5ByOrderByCreatedAtDesc();
 }

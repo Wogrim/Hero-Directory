@@ -25,11 +25,6 @@ public class HeroSpecialty {
 	@Size(min = 1, max = 20, message = "specialty name must be 1-20 characters")
 	private String name;
 
-	// for showing specialty as a color: #FFFFFF
-	@NotEmpty(message = "color is required!")
-	@Size(min = 7, max = 7, message = "color must be 7 characters: #FFFFFF")
-	private String color;
-
 	// one hero specialty has many heroes, but one hero has one specialty
 	@OneToMany(mappedBy = "heroSpecialty", fetch = FetchType.LAZY)
 	private List<HeroUser> heroes;
@@ -52,14 +47,6 @@ public class HeroSpecialty {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public List<HeroUser> getHeroes() {

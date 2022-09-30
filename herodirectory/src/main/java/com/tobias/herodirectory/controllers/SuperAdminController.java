@@ -55,7 +55,7 @@ public class SuperAdminController {
 	@PostMapping("/super-admin/admin")
 	public String _adminCreateSubmit(@Valid @ModelAttribute("newAdmin") AdminUser adminUser,
 			BindingResult result, Model model) {
-		// do further validation checks in the service, creates if no errors
+		// try create admin with further validation
 		adminServ.create(adminUser, result);
 
 		// re-render the page with errors if there were errors
@@ -69,7 +69,7 @@ public class SuperAdminController {
 	}
 
 	// Gender view all / create page
-	@GetMapping("super-admin/gender")
+	@GetMapping("/super-admin/gender")
 	public String _genderPage(@ModelAttribute("newGender") Gender gender, Model model) {
 		List<Gender> allGenders = genderServ.readAll();
 		model.addAttribute("allGenders", allGenders);
@@ -80,7 +80,7 @@ public class SuperAdminController {
 	@PostMapping("/super-admin/gender")
 	public String _genderCreateSubmit(@Valid @ModelAttribute("newGender") Gender gender, BindingResult result,
 			Model model) {
-		// do further validation checks in the service, creates if no errors
+		// try create gender with additional validation
 		genderServ.create(gender, result);
 
 		// re-render the page with errors if there were errors
@@ -105,7 +105,7 @@ public class SuperAdminController {
 	@PostMapping("/super-admin/hero-rank")
 	public String _heroRankCreateSubmit(@Valid @ModelAttribute("newHeroRank") HeroRank heroRank, BindingResult result,
 			Model model) {
-		// do further validation checks in the service, creates if no errors
+		// try create hero rank with additional validation
 		heroRankServ.create(heroRank, result);
 
 		// re-render the page with errors if there were errors
@@ -130,7 +130,7 @@ public class SuperAdminController {
 	@PostMapping("/super-admin/hero-specialty")
 	public String _heroSpecialtyCreateSubmit(@Valid @ModelAttribute("newHeroSpecialty") HeroSpecialty heroSpecialty, BindingResult result,
 			Model model) {
-		// do further validation checks in the service, creates if no errors
+		// try create hero specialty with additional validation
 		heroSpecialtyServ.create(heroSpecialty, result);
 
 		// re-render the page with errors if there were errors

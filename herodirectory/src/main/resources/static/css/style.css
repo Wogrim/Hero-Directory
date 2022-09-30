@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+
+.heroCard {
+	padding: 10px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+.heroCard>.imgContainer {
+	width: 200px;
+	height: 200px;
+}
+
+.heroCard img {
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.heroCard>.nameplate {
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.heroCard>.philosophy {
+	height: 100px;
+	background-color: #ffffcc;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

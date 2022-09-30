@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -28,7 +29,7 @@ public class HeroRank {
     
     //for sorting
     @NotNull
-    @NotEmpty
+    @Positive
     private Integer relativePower;
     
     //for showing rank as a color: #FFFFFF
